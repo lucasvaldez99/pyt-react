@@ -1,0 +1,24 @@
+ul{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    flex-direction: row;
+    padding-top: 10px 10px ;
+    border: 2px solid rgb(73, 136, 214);
+ }
+ li{
+     text-decoration: none;
+     color: rgb(243, 243, 243);
+     padding: 5px;
+     display: inline-flex;
+ }
+ a{
+     text-decoration: none;
+     color: rgb(32, 189, 163);
+     font-weight: 500;
+     padding:10px; 
+     width: 10;	
+ }
+ a:hover{
+     color:rgb(233, 120, 14)
+ }
