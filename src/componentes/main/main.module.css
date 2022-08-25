@@ -1,0 +1,16 @@
+.main{
+   
+    height: 600px;
+    width: auto;
+}
+.h2{
+text-align: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.parrafo{
+    text-align: center;
+    text-decoration: underline 1px dashed blue;
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
