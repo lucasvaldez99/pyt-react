@@ -1,14 +1,36 @@
-import estilo from './itemList.module.css'
+import React, {useEffect, useState} from 'react'
+import { productos } from '../mock/productos'
+import  ItemList  from '../itemList/itemList'
 
+const ItemListContainer = () =>{
+    const [items, setItems] = useState([])
 
-const ItemListContainer = ({bienvenida}) =>{
+    
+
+    useEffect(()=> {
+        const listadoProducts = new Promise((res,rej)=>{
+            setTimeout(()=>{
+             res(productos)
+            },2000) 
+         });
+     
+     
+     listadoProducts.then((data)=>{
+         setItems(data)
+     })
+        
+       .catch((error) => {
+         console.log('hubo un error',error)
+       }
+     
+       )
+    }, [])
+    
+
     return(
-   <>
-
-   <h2 className={estilo.saludo}>{bienvenida}</h2>
-
-   <p className={estilo.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore labore culpa fugit cupiditate doloremque debitis! Eos, cupiditate est. Maxime accusamus illo iusto dolorem reprehenderit, officia animi culpa molestiae minus.</p>
-   </>
+   
+    <ItemList items={items}/>
+   
     )
 }
 

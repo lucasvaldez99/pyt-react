@@ -20,10 +20,12 @@ const onAdd = ()=>{
   return (
     <>
     <Nav/>
-    <ItemListContainer bienvenida={bienvenida}/>
+    
     <Contador stock={stock} initial={initial} onAdd={onAdd}/>
     <Main/>
+    <ItemListContainer bienvenida={bienvenida}/>
     <Footer/>
+    
     </>
   )
 }
