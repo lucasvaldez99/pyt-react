@@ -1,14 +1,16 @@
 import React from "react";
-
+import estilos from "./item.module.css"
 
 const Item = ({items}) => {
     return(
-        <div  key={items.id}>
-         <h2>{items.nombre}</h2>
-         <h3>{items.precio}</h3>
+        
+            <div className={estilos.producto}>
+        <img src={items.img} className={estilos.img} alt=""/>
+         <h3>{items.nombre}</h3>
+         <p>{items.precio}</p>
          <h4>{items.cantidad}</h4>
-         <img src={items.img} alt=""/>
-        </div>
+         </div>
+        
     )
 }
 

@@ -4,6 +4,7 @@ import Main from './componentes/main/main';
 import Footer from './componentes/footer/footer';
 import ItemListContainer from './componentes/itemListContainer/itemListContainer';
 import Contador from './componentes/contador/contador';
+import ItemDetailContainerm from './componentes/itemDetailContainer/itemdetailcontainer';
 
 
 
@@ -20,10 +21,11 @@ const onAdd = ()=>{
   return (
     <>
     <Nav/>
-    
-    <Contador stock={stock} initial={initial} onAdd={onAdd}/>
     <Main/>
     <ItemListContainer bienvenida={bienvenida}/>
+    <ItemDetailContainerm/>
+    <Contador stock={stock} initial={initial} onAdd={onAdd}/>
+   
     <Footer/>
     
     </>
