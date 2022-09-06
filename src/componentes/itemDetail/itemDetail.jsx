@@ -1,5 +1,5 @@
 import React from "react"
-import estilo from "./itemdetail.module.css"
+import estilo from "./itemDetail.module.css"
 
 
 const ItemDetail = ({data})=>{

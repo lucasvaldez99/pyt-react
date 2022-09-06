@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from "react"
 
 import { productos } from "../mock/productos"
- import ItemDetail from "../itemdetail/itemdetail"
+ import ItemDetail from "../itemDetail/itemDetail"
   
 
 

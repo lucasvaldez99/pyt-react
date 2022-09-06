@@ -4,7 +4,7 @@ import Main from './componentes/main/main';
 import Footer from './componentes/footer/footer';
 import ItemListContainer from './componentes/itemListContainer/itemListContainer';
 import Contador from './componentes/contador/contador';
-import ItemDetailContainerm from './componentes/itemDetailContainer/itemdetailcontainer';
+import ItemDetailContainerm from './componentes/itemDetailContainer/itemDetailContainer';
 
 
 
