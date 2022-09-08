@@ -5,6 +5,7 @@ export const productos =  [
     "cantidad": 1,
     "desc": "es un chaleco super reforzado y comodo",
     "precio": 1500,
+    "categoria":"perros",
     "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1661959109/productos/27446c781f3f468e518d6e0fc7cdedb3--schnauzers-sammy_nflvme.jpg"
   },
   {
@@ -13,6 +14,7 @@ export const productos =  [
     "cantidad": 1,
     "desc": "es una habitacion que cumple con todo y mas.....",
     "precio": 1100,
+    "categoria":"perros",
     "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1661959381/productos/collares_qcfn4a.jpg"
   },
   {
@@ -21,23 +23,26 @@ export const productos =  [
     "cantidad": 1,
     "desc": "es una habitacion que cumple con todo y mas.....",
     "precio": 1200,
+    "categoria":"perros",
     "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1661959115/productos/correa-paseo-perros-reforzadas-huellitas-ondamascotera_c4q1l6.jpg"
   },
   {
     "id": 4,
-    "nombre": "camas",
+    "nombre": "Casa",
     "cantidad": 1,
     "desc": "es una habitacion que cumple con todo y mas.....",
-    "precio": 1400,
-    "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1661959118/productos/descarga_zi2v5x.jpg"
+    "precio": 15000,
+    "categoria":"gatos",
+    "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1662565233/productos/casagato_wjs9v3.jpg"
   },
   {
     "id": 5,
-    "nombre": "pelotas",
+    "nombre": "Chalecos",
     "cantidad": 1,
     "desc": "es una habitacion que cumple con todo y mas.....",
     "precio": 1200,
-    "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1661959130/productos/pelota_kem6x7.jpg"
+    "categoria":"gatos",
+    "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1662565229/productos/chalecogato_yh4hjy.jpg"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@ export const productos =  [
     "cantidad": 1,
     "desc": "es una habitacion que cumple con todo y mas.....",
     "precio": 1500,
-    "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1661959125/productos/juguetes_noiepu.jpg"
+    "categoria":"gatos",
+    "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1662565224/productos/juhutes_bazipz.jpg"
   },
   {
     "id": 7,
@@ -53,30 +59,34 @@ export const productos =  [
     "cantidad": 1,
     "desc": "una habitacion confort",
     "precio": 5000,
+    "categoria":"gatos",
     "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1661959145/productos/shampoos_ibv1l2.jpg"
   },
   {
     "id": 8,
-    "nombre": "perfumes",
+    "nombre": "pecera",
     "cantidad": 1,
     "desc": "una habitacion confort",
     "precio": 4000,
-    "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1661959144/productos/perfumes_erq8xt.jpg"
+    "categoria":"peces",
+    "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1662564932/productos/pecera_qimepo.jpg"
   },
   {
     "id": 9,
-    "nombre": "peluches",
+    "nombre": "pescados",
     "cantidad": 1,
     "desc": "una habitacion confort",
     "precio": 3000,
-    "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1661959134/productos/peluches_hfbecl.jpg"
+    "categoria":"peces",
+    "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1662564945/productos/pescados_kykfyy.jpg"
   },
   {
     "id": 10,
-    "nombre": "mochilas transportadoras",
+    "nombre": "Alimento balanceado",
     "cantidad": 1,
     "desc": "una habitacion confort",
     "precio": 700,
-    "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1661959155/productos/mochila_bighmt.jpg"
+    "categoria":"peces",
+    "img": "https://res.cloudinary.com/dgb1r2nnn/image/upload/v1662564925/productos/alimento_non6jt.jpg"
   },
 ]

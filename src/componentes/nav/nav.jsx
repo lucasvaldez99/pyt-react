@@ -1,6 +1,7 @@
 import React from 'react';
 import { CardWidjet } from './CardWidjet';
 import  estilos from'./nav.module.css'
+import { Link } from 'react-router-dom';
 
 const Nav = () =>{
     return( 
@@ -9,23 +10,23 @@ const Nav = () =>{
                 
                 <ul>
                 <div className={estilos.logo}>
-                 <p>Hold the <b className={estilos.masco}>Line</b></p>
+                 <p>Mundo <b className={estilos.masco}>MASCOTAS</b></p>
                  </div>
-                    <li>
-                        <a href="http://">Nosotros</a>
-                    </li>
-                    <li>
-                        <a href="http://">Contacto</a>
-                    </li>
-                    <li>
-                        <a href="http://">Nuestros clientes</a>
-                    </li>
-                    <li>
-                        <a href="http://">Ubicacion</a>
-                    </li>
-                   <li>
-                    <CardWidjet/>
-                   </li>
+                
+                        <Link to="/categorias/perros">Perros</Link>
+                    
+                
+                        <Link to="/categorias/gatos">Gatos</Link>
+                    
+                
+                        <Link to="/categorias/peces">peces</Link>
+                    
+                
+                        <Link to="/">Inicio</Link>
+                    
+                <Link to="/contador"><CardWidjet/></Link>
+                    
+                   
                 </ul>
               
             </nav>

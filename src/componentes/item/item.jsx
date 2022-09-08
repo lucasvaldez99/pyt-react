@@ -1,6 +1,6 @@
 import React from "react";
 import estilos from "./item.module.css"
-
+import { Link } from "react-router-dom";
 const Item = ({items}) => {
     return(
         
@@ -9,6 +9,9 @@ const Item = ({items}) => {
          <h3>{items.nombre}</h3>
          <p>{items.precio}</p>
          <h4>{items.cantidad}</h4>
+         <Link to={`/itemdetail/${items.id} `}>
+         <button className={estilos.detalles}> Ver detalles</button>
+         </Link>
          </div>
         
     )

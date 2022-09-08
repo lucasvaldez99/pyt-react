@@ -5,7 +5,7 @@ import Footer from './componentes/footer/footer';
 import ItemListContainer from './componentes/itemListContainer/itemListContainer';
 import Contador from './componentes/contador/contador';
 import ItemDetailContainerm from './componentes/itemDetailContainer/itemDetailContainer';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 const App = () => {

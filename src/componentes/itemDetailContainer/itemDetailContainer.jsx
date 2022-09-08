@@ -2,12 +2,14 @@ import React,{useEffect, useState} from "react"
 
 import { productos } from "../mock/productos"
  import ItemDetail from "../itemDetail/itemDetail"
-  
+import { useParams } from "react-router-dom"
+
 
 
 const ItemDetailContainerm = ()=>{
+const {idProd} = useParams();
 
-const product = productos.find((productos)=>productos.id === 1)
+const product = productos.find((productos)=>productos.id === Number(idProd))
 
 const [data, setData] = useState({})
 
@@ -15,16 +17,16 @@ useEffect(() =>{
     const getData = new Promise((resolve, reject) => {
         setTimeout(()=>{
       resolve(product)
-        },2000)
+        },1000)
     })
     getData.then((data)=>{setData(data)})
-},[])
+},[product])
 
 
     return(
-        <div>
+        
             <ItemDetail data={data}/>
-        </div>
+        
     )
 }
 
