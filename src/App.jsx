@@ -5,7 +5,7 @@ import ItemListContainer from './componentes/itemListContainer/itemListContainer
 import Contador from './componentes/contador/contador';
 import ItemDetailContainerm from './componentes/itemDetailContainer/itemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
+import Cart from './componentes/cart/cart';
 
 
 const App = () => {
@@ -24,16 +24,16 @@ const onAdd = ()=>{
     <Nav/>
     
 
-     <Routes>
+    <Routes>
      
-      <Route path="/" element={ <ItemListContainer bienvenida={bienvenida}/>}/>
-      
-      <Route path='/itemDetail/:idProd' element={<ItemDetailContainerm/>}/>
-   
-       <Route path='/categorias/:categoriasName'element={<ItemListContainer/>}/>
+     <Route path="/" element={ <ItemListContainer bienvenida={bienvenida}/>}/>
+     
+     <Route path='/itemdetail/:idProd' element={<ItemDetailContainerm/>}/>
+  
+      <Route path='/categorias/:categoriasName'element={<ItemListContainer/>}/>
 
-      <Route path='/contador'  element={<Contador stock={stock} initial={initial} onAdd={onAdd}/>}    /> 
-    </Routes>
+     <Route path='/cart' element={<Cart/>}/> 
+   </Routes>
 
 
     <Footer/>

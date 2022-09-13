@@ -15,14 +15,12 @@ const restar = ()=>{
 }
 
 
-
-
     return(
         <div className={estilos.contenedorDiv}>
             <button className={estilos.acciones} onClick={sumar}>+</button>
             <button className={estilos.acciones} onClick={restar}>-</button>
             <p className={estilos.Productos}>Productos = {count}</p>
-            <button className={estilos.btn} onClick={onAdd}> agregar al carrito</button>
+            <button onClick={() => onAdd(count)}>Agregar al carrito</button>
         </div>
     )
 }
