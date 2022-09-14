@@ -1,18 +1,23 @@
 import React from "react"
-import { useState } from "react"
+import { useCartContext } from "../../context/CardContext"
+import { useState} from "react"
 import { Link } from "react-router-dom"
 import Contador from "../contador/contador"
 import estilo from "./itemDetail.module.css"
+
+
+
 
 
 const ItemDetail = ({data})=>{
 
 const [goToCart, setToCart] = useState(false)    
 
+const {addProduct} = useCartContext();
 
-
-const agregar = () =>{
+const agregar = (quantity) =>{
     setToCart(true)
+    addProduct(data, quantity)
 }
    
     return(
