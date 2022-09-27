@@ -67,25 +67,3 @@ color="black" font-size="900"
 }
 export default ItemListContainer
 
-
-// const listadoProducts = new Promise((res,rej)=>{
-//   const prodFiltrados = productos.filter((prod)=>prod.categoria === categoriasName)
-    
-//    setTimeout(()=>{
-//     res(categoriasName ? prodFiltrados : productos )
-//    },3000) 
-// });
-
-
-// listadoProducts.then((data)=>{
-// setItems(data)
-// setLoanding(false)
-// })
-
-// .catch((error) => {
-// console.log('hubo un error',error)
-// }
-
-// )
-// return()=>{
-// setLoanding(true)
