@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
-import { productos } from '../mock/productos'
 import  ItemList  from '../itemList/itemList'
 import { CombSpinner } from "react-spinners-kit";
-
+import estilos from'./itemList.module.css'
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../firebaseConfig';
 
 const ItemListContainer = () =>{
     const [items, setItems] = useState([])
@@ -13,35 +14,37 @@ const ItemListContainer = () =>{
 const {categoriasName} = useParams()
 
     useEffect(()=> {
-            const listadoProducts = new Promise((res,rej)=>{
-               const prodFiltrados = productos.filter((prod)=>prod.categoria === categoriasName)
-                 
-                setTimeout(()=>{
-                 res(categoriasName ? prodFiltrados : productos )
-                },3000) 
-             });
-         
-         
-         listadoProducts.then((data)=>{
-             setItems(data)
-             setLoanding(false)
-         })
-            
-           .catch((error) => {
-             console.log('hubo un error',error)
-           }
-         
-           )
-          return()=>{
-            setLoanding(true)
-          }
-
+   
        
+       const productosCollection = collection(db, "productos")
+       
+
+   if (categoriasName) {
+    const prodFilter = query(
+      productosCollection,where("categoria","==",categoriasName)
+    )
+    getDocs(prodFilter).then((res) =>
+        setItems(res.docs.map((product) => ({ id: product.id, ...product.data() }))
+        ) 
+      );
+   } else {
+    getDocs(productosCollection).then((res) =>
+    setItems(
+      res.docs.map((product) => ({ id: product.id, ...product.data() }))
+    )
+  );
+   }
+        
+
+
+      
+   setLoanding(false)
+
     }, [categoriasName])
     
 
     return(
-    <div>
+    <div className={estilos.contenedor}>
 {isloanding ? ( <>
 <h2>Cargando productos....</h2>
 <CombSpinner
@@ -65,69 +68,24 @@ color="black" font-size="900"
 export default ItemListContainer
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// const listadoProducts = new Promise((res,rej)=>{
+//   const prodFiltrados = productos.filter((prod)=>prod.categoria === categoriasName)
+    
+//    setTimeout(()=>{
+//     res(categoriasName ? prodFiltrados : productos )
+//    },3000) 
+// });
+
+
+// listadoProducts.then((data)=>{
+// setItems(data)
+// setLoanding(false)
+// })
+
+// .catch((error) => {
+// console.log('hubo un error',error)
+// }
+
+// )
+// return()=>{
+// setLoanding(true)

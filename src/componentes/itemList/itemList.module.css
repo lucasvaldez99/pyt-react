@@ -1,4 +1,6 @@
-.contenedor{
-    display: flex;
-     justify-content: center;
-}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   width: auto;
+   
+   }
