@@ -1,21 +1,17 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import {getFirestore} from 'firebase/firestore'
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAqDFZ714-IBaCwSnj7k4lnHDaxUNpe03A",
-  authDomain: "mundo-mascotas-f0560.firebaseapp.com",
-  projectId: "mundo-mascotas-f0560",
-  storageBucket: "mundo-mascotas-f0560.appspot.com",
-  messagingSenderId: "1064465437447",
-  appId: "1:1064465437447:web:4167fc630feafc74576ba2",
-  measurementId: "G-CXZQGNTV2V"
+  apiKey: "AIzaSyCS-gCGQ-sBjohyTV5T_QZjfaGpHVhP-5k",
+  authDomain: "mundo-mascotas-e7096.firebaseapp.com",
+  projectId: "mundo-mascotas-e7096",
+  storageBucket: "mundo-mascotas-e7096.appspot.com",
+  messagingSenderId: "543667545714",
+  appId: "1:543667545714:web:ffdf1d7e769b0e566e84eb"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+ export const db = getFirestore(app)
