@@ -66,4 +66,3 @@ color="black" font-size="900"
 
 }
 export default ItemListContainer
-

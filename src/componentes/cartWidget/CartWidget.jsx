@@ -1,18 +1,16 @@
 import { BiCartAlt } from "react-icons/bi";
 import { useCartContext } from "../../context/CardContext";
-import  estilos from'./nav.module.css'
-import { Link } from "react-router-dom";
-  export  const CardWidjet = () =>{
+import  estilos from'./widget.module.css'
+
+  export  const CardWidget = () =>{
     const {totalProducts} = useCartContext()
     return(
       <div className={estilos.connt}>
-      <>
-    <Link to='/cart'>
     
     <span className={estilos.icono}><BiCartAlt/>{totalProducts() || ''}</span>
-    </Link>
-    </>
+    
     </div>
     )
 
 }
+export default CardWidget

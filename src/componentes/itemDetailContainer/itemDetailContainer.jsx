@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from "react"
- import ItemDetail from "../itemDetail/itemDetail"
+ import ItemDetail from "../itemdetail/itemdetail"
 import { useParams } from "react-router-dom"
 import { db } from "../firebaseConfig"
 import { collection, getDoc, doc } from "firebase/firestore"
@@ -8,7 +8,7 @@ import { collection, getDoc, doc } from "firebase/firestore"
 const ItemDetailContainerm = ()=>{
 const {idProd} = useParams();
 
-//const product = productos.find((productos)=>productos.id === Number(idProd))
+
 
 const [data, setData] = useState({})
 
@@ -34,8 +34,9 @@ useEffect(() =>{
 
     return(
         
-            <ItemDetail data={data}/>
-        
+           <>
+            {data ? (<ItemDetail data={data}/>) : (<h2 >Cargando...</h2>)}
+            </>
     )
 }
 

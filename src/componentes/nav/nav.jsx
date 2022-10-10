@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardWidjet } from './CardWidjet';
+import CardWidget from '../cartWidget/CartWidget';
 import  estilos from'./nav.module.css'
 import { Link } from 'react-router-dom';
 
@@ -23,11 +23,11 @@ const Nav = () =>{
                     
                 
                         <Link to="/">Inicio</Link>
+                       
+                <Link to="/cart"><CardWidget/></Link>
                     
-                <Link to="/contador"><CardWidjet/></Link>
-                    
-                   
                 </ul>
+               
               
             </nav>
         </header>

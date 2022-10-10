@@ -33,9 +33,10 @@ const totalProducts = ()=> cart.reduce((acumulador, productoActual) => acumulado
     
 
 
+
 const totalPrice = ()=>{
-return cart.reduce((prev, act) => prev + act.quantity * act.precio, 0)
-}
+  return cart.reduce((prev, act) => prev + act.quantity * act.precio, 0)
+  }
 
     return (
         <CartContext.Provider value={{
