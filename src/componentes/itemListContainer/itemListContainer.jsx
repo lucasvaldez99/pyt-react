@@ -4,7 +4,7 @@ import  ItemList  from '../itemList/itemList'
 import { CombSpinner } from "react-spinners-kit";
 import estilos from'./itemList.module.css'
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import { db } from '../fireBaseConfig';
+import { db } from '../firebaseConfig';
 
 const ItemListContainer = () =>{
     const [items, setItems] = useState([])
