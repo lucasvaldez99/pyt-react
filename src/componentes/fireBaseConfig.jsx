@@ -1,8 +1,8 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "fireBase/app";
 
-import {getFirestore} from 'firebase/firestore'
+import {getFirestore} from 'fireBase/firestore'
 
-const firebaseConfig = {
+const fireBaseConfig = {
   apiKey: "AIzaSyCS-gCGQ-sBjohyTV5T_QZjfaGpHVhP-5k",
   authDomain: "mundo-mascotas-e7096.firebaseapp.com",
   projectId: "mundo-mascotas-e7096",
@@ -12,6 +12,6 @@ const firebaseConfig = {
 };
 
 
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(fireBaseConfig);
 
  export const db = getFirestore(app)
