@@ -4,7 +4,7 @@ import Nav from './componentes/nav/nav'
 import Footer from './componentes/footer/footer';
 import ItemListContainer from './componentes/itemListContainer/itemListContainer';
 
-import ItemDetailContainerm from './componentes/itemDetailContainer/itemDetailcontainer';
+import ItemDetailContainerm from './componentes/itemDetailContainer/itemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cart from './componentes/cart/cart';
 
@@ -29,7 +29,7 @@ const App = () => {
      
       <Route path="/" element={ <ItemListContainer bienvenida={bienvenida}/>}/>
       
-      <Route path='/itemdetail/:idProd' element={<ItemDetailContainerm/>}/>
+      <Route path='/itemDetail/:idProd' element={<ItemDetailContainerm/>}/>
    
        <Route path='/categorias/:categoriasName'element={<ItemListContainer/>}/>
 

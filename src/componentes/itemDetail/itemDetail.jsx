@@ -3,7 +3,7 @@ import { useCartContext } from "../../context/CardContext"
 import { useState} from "react"
 import { Link } from "react-router-dom"
 import Contador from "../contador/contador"
-import estilo from "./itemdetail.module.css"
+import estilo from "./itemDetail.module.css"
 
 
 
